@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(TAG, "检测到推送服务未启动，执行 启动推送服务逻辑");
                 }
             }
-        }, 0, 500);//500ms周期轮询
+        }, 0, 1000);//1000ms周期轮询
 
 
         //其他相关的初始化操作

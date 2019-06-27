@@ -199,7 +199,7 @@ public class AdUtility {
                     //悬浮窗显示成功后5秒后再关闭
                     removeFloatView();
                 }
-            }, 5000);
+            }, 7000);
 
 //            //将下载好的图片缓存起来
 //            if (null != bitmap) {
@@ -223,10 +223,11 @@ public class AdUtility {
             if (responseCode == 200) {
                 InputStream in = conn.getInputStream();
                 //图片压缩处理
-                BitmapFactory.Options option = new BitmapFactory.Options();
-                option.inSampleSize = 2;//宽高压缩为原来的1/2，
-                option.inPreferredConfig = Bitmap.Config.RGB_565;//设置图片的格式
-                Bitmap bitmap = BitmapFactory.decodeStream(in, null, option);
+//                BitmapFactory.Options option = new BitmapFactory.Options();
+//                option.inSampleSize = 2;//宽高压缩为原来的1/2，
+//                option.inPreferredConfig = Bitmap.Config.RGB_565;//设置图片的格式
+//                Bitmap bitmap = BitmapFactory.decodeStream(in, null, option);
+                Bitmap bitmap = BitmapFactory.decodeStream(in);
                 return bitmap;
             }
         } catch (IOException e) {
