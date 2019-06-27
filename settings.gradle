@@ -1,0 +1,4 @@
+include ':app'
+
+include ':AutoAISdk'
+project(":AutoAISdk").projectDir = file("../AutoAISdk/app")
